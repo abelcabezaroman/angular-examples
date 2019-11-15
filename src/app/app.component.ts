@@ -9,8 +9,12 @@ export class AppComponent {
   title = 'first-project';
 
   listOfFather: Array<string> = ['Camiseta', 'Pantalón', 'Botas'];
-  listOfFather2: Array<string> = ['Manzana', 'Fresa', 'Sandia'];
+  listOfFather2: Array<string> = ['Manzana', 'Fresa', 'Platano'];
   listOfFather3: Array<string> = ['Lujuria', 'Gula', 'Pereza'];
+
+  constructor(){
+
+  }
 
   imprimirEmit($event) {
     console.log($event);

@@ -6,19 +6,26 @@ import { AppComponent } from './app.component';
 import { FirstComponentComponent } from './first-component/first-component.component';
 import { IfExampleComponent } from './if-example/if-example.component';
 import { ForExampleComponent } from './for-example/for-example.component';
+import { ClassExampleComponent } from './class-example/class-example.component';
+import { GalleryExampleComponent } from './gallery-example/gallery-example.component';
+import { HttpClientModule } from '@angular/common/http';
+import { WebcamsService } from './services/webcams.service';
 
 @NgModule({
   declarations: [
     AppComponent,
     FirstComponentComponent,
     IfExampleComponent,
-    ForExampleComponent
+    ForExampleComponent,
+    ClassExampleComponent,
+    GalleryExampleComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
-  providers: [],
+  providers: [WebcamsService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

@@ -1,12 +1,26 @@
-<app-for-example [list]="listOfFather"></app-for-example>
-<app-for-example [list]="listOfFather2"></app-for-example>
-<app-for-example [list]="listOfFather3"></app-for-example>
+<a routerLink="/if-example">If example </a>
+<a routerLink="/gallery-example">Gallery example</a>
+
+<router-outlet></router-outlet>
+
+<!--<app-class-example></app-class-example>-->
 
 
-<app-if-example></app-if-example>
+<app-class-example [list]="listOfFather">
+  <h1>Lista de ropa</h1>
+</app-class-example>
+<app-class-example [list]="listOfFather2">
+  <h1>Lista de fruta</h1>
+</app-class-example>
+<app-class-example [list]="listOfFather3">
+  <h1>Lista de pecados capitales</h1>
+</app-class-example>
 
 
-<app-first-component [nombreVariable]="'First'"
-                     (nombreEmision)="imprimirEmit($event)"></app-first-component>
+<!--<app-if-example></app-if-example>-->
+
+
+<!--<app-first-component [nombreVariable]="'First'"-->
+<!--                     (nombreEmision)="imprimirEmit($event)"></app-first-component>-->
 
 
