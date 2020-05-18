@@ -10,6 +10,9 @@ import { ClassExampleComponent } from './class-example/class-example.component';
 import { GalleryExampleComponent } from './gallery-example/gallery-example.component';
 import { HttpClientModule } from '@angular/common/http';
 import { WebcamsService } from './services/webcams.service';
+import { XyzComponent } from './xyz/xyz.component';
+import { XyzChildComponent } from './xyz-child/xyz-child.component';
+import { ButtonComponent } from './button/button.component';
 
 @NgModule({
   declarations: [
@@ -18,7 +21,10 @@ import { WebcamsService } from './services/webcams.service';
     IfExampleComponent,
     ForExampleComponent,
     ClassExampleComponent,
-    GalleryExampleComponent
+    GalleryExampleComponent,
+    XyzComponent,
+    XyzChildComponent,
+    ButtonComponent
   ],
   imports: [
     BrowserModule,

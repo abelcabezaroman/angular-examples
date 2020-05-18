@@ -7,7 +7,10 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 })
 export class FirstComponentComponent implements OnInit {
 
-  @Input() nombreVariable: string = 'valor por defecto';
+  @Input() nombreVariable: string;
+
+
+
   @Output() nombreEmision = new EventEmitter();
 
 
@@ -21,7 +24,7 @@ export class FirstComponentComponent implements OnInit {
     console.log('##ABEL## >> FirstComponentComponent >>  funtionFirst', this.nombreVariable);
   }
 
-  hacerEventoClick(){
+  hacerEventoClick() {
     this.nombreEmision.emit('Me he emitido');
   }
 

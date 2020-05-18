@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-if-example',
@@ -7,7 +7,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class IfExampleComponent implements OnInit {
 
-  mostrarP: boolean = true;
+  @Input() mostrarP: boolean = false;
 
   constructor() { }
 
