@@ -1,0 +1,20 @@
+.c-tasks {
+  &__item {
+    color: red;
+    font-size: 14px;
+    font-family: Arial;
+    font-weight: 700;
+
+    &--done {
+      color: green;
+
+    }
+
+  }
+  &__text{
+    color: blue;
+  }
+  &__number{
+    color: purple;
+  }
+}

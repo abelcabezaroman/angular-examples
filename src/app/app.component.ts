@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TaskModel } from "./shared/ models/task.model";
 
 @Component({
   selector: 'app-root',
@@ -13,15 +14,26 @@ export class AppComponent {
   listOfFather2: Array<string> = ['Manzana', 'Fresa', 'Platano'];
   listOfFather3: Array<string> = ['Lujuria', 'Gula', 'Pereza'];
 
-  constructor(){
+  taskList: Array<TaskModel> = [
+    {name: 'Lavar al gato', isDone: false},
+    {name: 'Sacar al perro', isDone: false},
+    {name: 'Aplaudir a las 20:00', isDone: false},
+    {name: 'Hacer la comida', isDone: false}
+  ];
 
+  constructor() {
+
+    fetch('https://digimon-api.herokuapp.com/api/digimon').then(response => response.json())
+      .then(data => console.log(data));
   }
 
   imprimirEmit($event) {
     console.log($event);
   }
 
-  confirmed($event){
+  confirmed($event) {
     alert($event);
   }
 }
+
+

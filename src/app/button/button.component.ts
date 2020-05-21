@@ -14,7 +14,11 @@ export class ButtonComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.confirmEmitter.emit('Me he iniciado');
+    // this.confirmEmitter.emit('Me he iniciado');
+  }
+
+  clickedButton($event){
+    console.log('##ABEL## >> ButtonComponent >>  clickedButton', $event);
   }
 
 }

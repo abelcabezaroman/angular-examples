@@ -1,22 +1,31 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { IfExampleComponent } from './if-example/if-example.component';
-import { GalleryExampleComponent } from './gallery-example/gallery-example.component';
+import { ButtonComponent } from "./button/button.component";
+import { TasksComponent } from "./tasks/tasks.component";
+import { CounterComponent } from "./counter/counter.component";
 
 
 const routes: Routes = [
   {
-    path: 'if-example', component: IfExampleComponent
+    path: 'button', component: ButtonComponent
   },
   {
-    path: 'gallery-example', component: GalleryExampleComponent
+    path: 'tasks/:id', component: TasksComponent
   },
-  {path: '', redirectTo: '/if-example', pathMatch: 'full'},
+  {
+    path: 'tasks', component: TasksComponent
+  },
+  {
+    path: 'counter/:counter', component: CounterComponent
+  },
+  {
+    path: 'counter', redirectTo: 'counter/0'
+  },
+  {path: '', redirectTo: '/button', pathMatch: 'full'},
 ];
 
 // if-example
 // gallery-example
-
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

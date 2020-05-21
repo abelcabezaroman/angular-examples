@@ -1,0 +1,31 @@
+<!--<ul class="c-tasks">-->
+<!--  <li class="c-tasks__item" *ngFor="let task of tasks"-->
+<!--      [ngClass]="{'c-tasks__item&#45;&#45;done': task.isDone === true}">-->
+<!--    <app-checkbox-model-input-output [(checked)]="task.isDone"></app-checkbox-model-input-output>-->
+<!--    {{task.name}}</li>-->
+<!--</ul>-->
+
+{{taskId}}
+
+<ul class="c-tasks">
+  <li class="c-tasks__item" *ngFor="let task of tasks; let i = index"
+      [ngClass]="{'c-tasks__item--done': task.isDone === true}">
+    <input type="checkbox" [(ngModel)]="task.isDone">
+    {{task.name}}
+    <button (click)="removeTask(i)">X</button>
+  </li>
+</ul>
+
+
+<!--<ul class="c-tasks">-->
+<!--  <li class="c-tasks__item c-tasks__item&#45;&#45;done" *ngFor="let task of tasks">-->
+<!--    <app-checkbox-model-input-output [(checked)]="task.isDone"></app-checkbox-model-input-output>-->
+<!--    {{task.name}}-->
+<!--&lt;!&ndash;    <div class="c-tasks__text">AAA</div>&ndash;&gt;-->
+<!--&lt;!&ndash;    <p class="b-text-primary b-text-primary&#45;&#45;purple">BBB</p>&ndash;&gt;-->
+<!--  </li>-->
+<!--</ul>-->
+
+<input type="text" (keyup.enter)="saveTask()" [(ngModel)]="newTask">
+<button (click)="saveTask()">Guardar</button>
+

@@ -13,6 +13,12 @@ import { WebcamsService } from './services/webcams.service';
 import { XyzComponent } from './xyz/xyz.component';
 import { XyzChildComponent } from './xyz-child/xyz-child.component';
 import { ButtonComponent } from './button/button.component';
+import { TasksComponent } from './tasks/tasks.component';
+import { InputModelComponent } from './input-model/input-model.component';
+import { FormsModule } from "@angular/forms";
+import { CheckboxModelComponent } from "./checkbox-model/checkbox-model.component";
+import { CheckboxModelInputOutputComponent } from './checkbox-model-input-output/checkbox-model-input-output.component';
+import { CounterComponent } from './counter/counter.component';
 
 @NgModule({
   declarations: [
@@ -24,12 +30,18 @@ import { ButtonComponent } from './button/button.component';
     GalleryExampleComponent,
     XyzComponent,
     XyzChildComponent,
-    ButtonComponent
+    ButtonComponent,
+    TasksComponent,
+    InputModelComponent,
+    CheckboxModelComponent,
+    CheckboxModelInputOutputComponent,
+    CounterComponent
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [WebcamsService],
   bootstrap: [AppComponent]
