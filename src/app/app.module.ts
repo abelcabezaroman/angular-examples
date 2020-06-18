@@ -22,6 +22,7 @@ import { PersonCardComponent } from './person-card/person-card.component';
 import { CarCardComponent } from './car-card/car-card.component';
 import { LinksComponent } from './links/links.component';
 import { FormsModule } from "@angular/forms";
+import { GalleryComponent } from './gallery/gallery.component';
 
 @NgModule({
   declarations: [
@@ -41,7 +42,8 @@ import { FormsModule } from "@angular/forms";
     CounterComponent,
     PersonCardComponent,
     CarCardComponent,
-    LinksComponent
+    LinksComponent,
+    GalleryComponent
   ],
   imports: [
     BrowserModule,
