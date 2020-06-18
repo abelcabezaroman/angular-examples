@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { TaskModel } from "../shared/ models/task.model";
 import { ActivatedRoute } from "@angular/router";
+import { TaskModel } from "../shared/models/task.model";
 
 @Component({
   selector: 'app-tasks',

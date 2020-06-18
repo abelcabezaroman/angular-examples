@@ -12,6 +12,5 @@ export class ClassExampleComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-
   }
 }

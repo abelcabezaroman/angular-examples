@@ -15,10 +15,13 @@ import { XyzChildComponent } from './xyz-child/xyz-child.component';
 import { ButtonComponent } from './button/button.component';
 import { TasksComponent } from './tasks/tasks.component';
 import { InputModelComponent } from './input-model/input-model.component';
-import { FormsModule } from "@angular/forms";
 import { CheckboxModelComponent } from "./checkbox-model/checkbox-model.component";
 import { CheckboxModelInputOutputComponent } from './checkbox-model-input-output/checkbox-model-input-output.component';
 import { CounterComponent } from './counter/counter.component';
+import { PersonCardComponent } from './person-card/person-card.component';
+import { CarCardComponent } from './car-card/car-card.component';
+import { LinksComponent } from './links/links.component';
+import { FormsModule } from "@angular/forms";
 
 @NgModule({
   declarations: [
@@ -35,7 +38,10 @@ import { CounterComponent } from './counter/counter.component';
     InputModelComponent,
     CheckboxModelComponent,
     CheckboxModelInputOutputComponent,
-    CounterComponent
+    CounterComponent,
+    PersonCardComponent,
+    CarCardComponent,
+    LinksComponent
   ],
   imports: [
     BrowserModule,

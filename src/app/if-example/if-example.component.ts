@@ -7,7 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class IfExampleComponent implements OnInit {
 
-  @Input() mostrarP: boolean = false;
+  @Input() showP: boolean = false;
 
   constructor() { }
 
@@ -15,7 +15,7 @@ export class IfExampleComponent implements OnInit {
   }
 
   cambiarParrafo() {
-    this.mostrarP = !this.mostrarP;
+    this.showP = !this.showP;
 
     // this.mostrarP = this.mostrarP === true ? false : true;
 

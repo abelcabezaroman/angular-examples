@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import { TaskModel } from "./shared/ models/task.model";
+import { PersonModel } from "./shared/models/person.model";
+import { CarModel } from "./shared/models/car.model";
+import { TaskModel } from "./shared/models/task.model";
 
 @Component({
   selector: 'app-root',
@@ -9,31 +11,32 @@ import { TaskModel } from "./shared/ models/task.model";
 export class AppComponent {
   title = 'first-project';
 
-  name: string = 'Abel';
-  listOfFather: Array<string> = ['Camiseta', 'Pantalón', 'Botas'];
-  listOfFather2: Array<string> = ['Manzana', 'Fresa', 'Platano'];
-  listOfFather3: Array<string> = ['Lujuria', 'Gula', 'Pereza'];
+  person: PersonModel = {
+    name: 'Abel',
+    surname: 'Cabeza Román',
+    age: 99,
+    profession: 'Teacher'
+  }
 
-  taskList: Array<TaskModel> = [
-    {name: 'Lavar al gato', isDone: false},
-    {name: 'Sacar al perro', isDone: false},
-    {name: 'Aplaudir a las 20:00', isDone: false},
-    {name: 'Hacer la comida', isDone: false}
-  ];
+  car: CarModel = {
+    brand: 'Mazda',
+    model: '6',
+    year: 2018
+  }
+
+
+  taskList: TaskModel[] = [
+    {name: 'Sacar al perro', isDone: true},
+    {name: 'Limpiar la casa', isDone: true},
+    {name: 'Jugar', isDone: false}
+  ]
 
   constructor() {
 
-    fetch('https://digimon-api.herokuapp.com/api/digimon').then(response => response.json())
-      .then(data => console.log(data));
+
   }
 
-  imprimirEmit($event) {
-    console.log($event);
-  }
 
-  confirmed($event) {
-    alert($event);
-  }
 }
 
 

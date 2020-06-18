@@ -1,10 +1,10 @@
-<div *ngIf="mostrarP">
+<div *ngIf="showP">
   <p>Mostrar la variable true</p>
   <div>
     <p>Parrafo anidado</p>
   </div>
 </div>
-<p *ngIf="!mostrarP">La variable es false</p>
+<p *ngIf="!showP">La variable es false</p>
 <!-- *ngIf=""-->
 
 <button (click)="cambiarParrafo()">Cambiar variable</button>
