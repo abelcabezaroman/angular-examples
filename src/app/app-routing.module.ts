@@ -25,7 +25,7 @@ const routes: Routes = [
 ];
 
 // if-example
-// gallery-example
+// gallery-list-example
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

@@ -22,6 +22,8 @@ import { PersonCardComponent } from './person-card/person-card.component';
 import { CarCardComponent } from './car-card/car-card.component';
 import { LinksComponent } from './links/links.component';
 import { FormsModule } from "@angular/forms";
+import { GalleryListComponent } from './gallery/components/gallery-list/gallery-list.component';
+import { GalleryFormComponent } from './gallery/components/gallery-form/gallery-form.component';
 import { GalleryComponent } from './gallery/gallery.component';
 
 @NgModule({
@@ -43,6 +45,8 @@ import { GalleryComponent } from './gallery/gallery.component';
     PersonCardComponent,
     CarCardComponent,
     LinksComponent,
+    GalleryListComponent,
+    GalleryFormComponent,
     GalleryComponent
   ],
   imports: [

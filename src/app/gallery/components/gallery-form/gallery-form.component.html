@@ -1,0 +1,12 @@
+<form (ngSubmit)="addNewItemGallery()">
+  <input name="imgUrl" type="text" [(ngModel)]="newItem.imgUrl">
+  <input name="caption" type="text" [(ngModel)]="newItem.caption">
+  <select name="createdBy" [(ngModel)]="newItem.createdBy">
+    <option value="Abel">Abel</option>
+    <option value="Diego">Diego</option>
+    <option value="Javier">Javier</option>
+    <option value="Laura">Laura</option>
+  </select>
+
+  <input type="submit" value="Añadir">
+</form>
