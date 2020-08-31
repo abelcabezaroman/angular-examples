@@ -3,6 +3,7 @@ import { RouterModule, Routes } from '@angular/router';
 import { ButtonComponent } from "./button/button.component";
 import { TasksComponent } from "./tasks/tasks.component";
 import { CounterComponent } from "./counter/counter.component";
+import { GalleryComponent } from "./gallery/gallery.component";
 
 
 const routes: Routes = [
@@ -21,7 +22,12 @@ const routes: Routes = [
   {
     path: 'counter', redirectTo: 'counter/0'
   },
-  {path: '', redirectTo: '/button', pathMatch: 'full'},
+  {
+    path: 'gallery/item/detail', component: GalleryComponent
+  },
+  {
+    path: '', redirectTo: '/button', pathMatch: 'full'
+  },
 ];
 
 // if-example

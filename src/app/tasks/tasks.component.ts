@@ -9,20 +9,17 @@ import { TaskModel } from "../shared/models/task.model";
 })
 export class TasksComponent implements OnInit {
 
-  @Input() tasks: Array<TaskModel>;
+  @Input() tasks: Array<TaskModel> = [
+    {name: 'Sacar al perro', isDone: true},
+    {name: 'Limpiar la casa', isDone: true},
+    {name: 'Jugar', isDone: false}
+  ];
 
-  taskId;
 
 
   newTask: string;
 
-  constructor(private activatedRoute: ActivatedRoute) {
-    this.activatedRoute.params.subscribe((params) => {
-      if (params && params.id) {
-        this.taskId = params.id;
-      }
-    });
-  }
+
 
   ngOnInit() {
   }

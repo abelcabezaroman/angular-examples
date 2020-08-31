@@ -1,11 +1,11 @@
-import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnChanges, OnDestroy, OnInit, Output } from '@angular/core';
 
 @Component({
   selector: 'app-button',
   templateUrl: './button.component.html',
   styleUrls: ['./button.component.scss']
 })
-export class ButtonComponent implements OnInit {
+export class ButtonComponent implements OnInit, OnDestroy, OnChanges {
 
   @Input() text: string = 'Aceptar';
 
@@ -13,12 +13,20 @@ export class ButtonComponent implements OnInit {
 
   constructor() { }
 
-  ngOnInit() {
-    // this.confirmEmitter.emit('Me he iniciado');
+  clickedButton($event) {
+    console.log('##ABEL## >> ButtonComponent >>  clickedButton', $event);
   }
 
-  clickedButton($event){
-    console.log('##ABEL## >> ButtonComponent >>  clickedButton', $event);
+  ngOnInit() {
+    console.log('##ABEL## >> ButtonComponent >>  ngOnInit');
+  }
+
+  ngOnChanges(changes){
+    console.log('##ABEL## >> ButtonComponent >>  ngOnChanges', changes);
+  }
+
+  ngOnDestroy() {
+    console.log('##ABEL## >> ButtonComponent >>  ngOnDestroy');
   }
 
 }

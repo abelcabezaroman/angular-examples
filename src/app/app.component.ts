@@ -1,16 +1,17 @@
-import { Component } from '@angular/core';
+import { Component, OnChanges, OnInit } from '@angular/core';
 import { PersonModel } from "./shared/models/person.model";
 import { CarModel } from "./shared/models/car.model";
 import { TaskModel } from "./shared/models/task.model";
+import { HttpClient } from "@angular/common/http";
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'first-project';
-
+  buttonText;
   person: PersonModel = {
     name: 'Abel',
     surname: 'Cabeza Román',
@@ -33,9 +34,13 @@ export class AppComponent {
 
 
 
-  constructor() {
+  constructor(private httpClient: HttpClient) {
+  }
 
-
+  ngOnInit(){
+    this.httpClient.get('https://api.got.show/api/show/characters').subscribe(res => {
+      console.log('##ABEL## >> AppComponent >>  res', res);
+    })
   }
 
 
