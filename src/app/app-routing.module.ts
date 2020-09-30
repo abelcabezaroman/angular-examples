@@ -1,14 +1,15 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
-import { ButtonComponent } from "./button/button.component";
 import { TasksComponent } from "./tasks/tasks.component";
 import { CounterComponent } from "./counter/counter.component";
 import { GalleryComponent } from "./gallery/gallery.component";
+import { ButtonComponent } from './button/button.component';
+import { ButtonPageComponent } from './button-page/button-page.component';
 
 
 const routes: Routes = [
   {
-    path: 'button', component: ButtonComponent
+    path: 'button', component: ButtonPageComponent
   },
   {
     path: 'tasks/:id', component: TasksComponent

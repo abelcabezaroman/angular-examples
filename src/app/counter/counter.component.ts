@@ -17,6 +17,7 @@ export class CounterComponent implements OnInit {
       }
     });
   }
+  
   ngOnInit() {
   }
 

@@ -25,6 +25,7 @@ import { FormsModule } from "@angular/forms";
 import { GalleryListComponent } from './gallery/components/gallery-list/gallery-list.component';
 import { GalleryFormComponent } from './gallery/components/gallery-form/gallery-form.component';
 import { GalleryComponent } from './gallery/gallery.component';
+import { ButtonPageComponent } from './button-page/button-page.component';
 
 @NgModule({
   declarations: [
@@ -47,7 +48,8 @@ import { GalleryComponent } from './gallery/gallery.component';
     LinksComponent,
     GalleryListComponent,
     GalleryFormComponent,
-    GalleryComponent
+    GalleryComponent,
+    ButtonPageComponent
   ],
   imports: [
     BrowserModule,
